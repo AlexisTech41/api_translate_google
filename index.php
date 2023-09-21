@@ -29,6 +29,7 @@
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!--
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
@@ -45,13 +46,14 @@
                         </li>
                     </ul>
                 </div>
+-->
             </div>
         </nav>
   </header>
   <main class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-    <div class="container rounded border shadow p-3 mb-5 bg-body align-items-center">
-        <div class="row align-items-center">
-            <div class="col-5">
+    <div class="container rounded border shadow p-3 mb-5 bg-body">
+        <div class="row">
+            <div class="col-md-5 col-12 mb-3">
                 <div class="form-floating">
                     <textarea class="form-control" placeholder="Leave a comment here" id="textotraducir" style="height: 10rem"></textarea>
                     <label for="textotraducir">Texto a traducir:</label>
@@ -59,37 +61,34 @@
             </div>
             <input type="hidden" id="idiomaOrigen" value="es">
             <input type="hidden" id="idiomaDestino" value="en">
-            <div class="col-2 ">
-                <div class="text-center d-flex align-items-center justify-content-between pb-3">
-                    <div class="row align-items-center">
-                        <div class="col-12 d-flex align-items-center">
-                            <div class="d-inline-block bandera"><img id="paisOrigen" src="assets/banderas/mexico.png" alt="Bandera de México" data-idioma="es"></div>
-                            <button class="btn btn-info ms-2" onclick="traducir();">
-                                Traducir
-                            </button>
-                            <div class="d-inline-block bandera ms-2"><img id="paisDestino" src="assets/banderas/usa.png" alt="Bandera de Estados Unidos" data-idioma="en"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center ">
-                    <button class="btn btn-primary" onclick="intercambiarBanderas();">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                            <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
-                            <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
-                        </svg>
+            <div class="col-md-2 col-12 d-flex align-items-center justify-content-center">
+                <div class="text-center">
+                    <div class="d-inline-block bandera"><img id="paisOrigen" src="assets/banderas/mexico.png" alt="Bandera de México" data-idioma="es"></div>
+                    <button class="btn btn-info mt-2" onclick="traducir();">
+                        Traducir
                     </button>
+                    <div class="d-inline-block bandera mt-2"><img id="paisDestino" src="assets/banderas/usa.png" alt="Bandera de Estados Unidos" data-idioma="en"></div>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="col-md-5 col-12">
                 <div class="form-floating">
                     <textarea class="form-control" placeholder="Leave a comment here" id="textotraducido" style="height: 10rem"></textarea>
                     <br>
-                    <label for="texttraducido">Texto traducido:</label>
+                    <label for="textotraducido">Texto traducido:</label>
                 </div>
+            </div>
+            <div class="col-12 text-center mt-3">
+                <button class="btn btn-primary" onclick="intercambiarBanderas();">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
 </main>
+
   <footer>
     <!-- place footer here -->
   </footer>
